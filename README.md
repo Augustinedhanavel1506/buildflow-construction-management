@@ -4,6 +4,17 @@ A multi-tenant web app for construction businesses, covering the work from estim
 
 > **Status:** under development. Selected modules are functional. Built with the help of AI coding assistants.
 
+## Screenshots
+
+| | |
+|---|---|
+| ![Dashboard](docs/screenshots/02-dashboard.png) **Dashboard**: projects, cash flow, costs, recent activity | ![Cost breakdown](docs/screenshots/12-estimate-cost-breakdown.png) **Home Estimator**: cost breakdown by component |
+| ![3D home view](docs/screenshots/13-3d-home-view.png) **3D home view**: orbit, walk inside, edit colours and furniture | ![Floor plan](docs/screenshots/08-floor-plan.png) **Floor plan editor**: suggested layout, rooms, doors, furniture |
+| ![BOQ](docs/screenshots/05-project-boq.png) **Bill of Quantities**: estimated vs actual cost | ![Billing](docs/screenshots/10-project-billing.png) **RA bills and payments** |
+| ![Daily reports](docs/screenshots/07-project-daily-reports.png) **Daily site reports** | ![Dealers](docs/screenshots/14-dealers.png) **Dealers** and their rate cards |
+
+*Screenshots use sample demo data.*
+
 ## Tech stack
 - **Backend:** Java 21, Spring Boot 4, Spring Security (JWT), Spring Data JPA, MySQL
 - **Frontend:** React 19, TypeScript, Vite, React Router, Axios, Three.js
