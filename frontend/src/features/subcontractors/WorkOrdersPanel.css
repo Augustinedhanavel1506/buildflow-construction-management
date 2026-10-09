@@ -1,0 +1,37 @@
+.bf-work-orders-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-work-orders-panel__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-work-orders-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bf-work-orders-panel__trade {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.bf-work-orders-panel__bills-link {
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.bf-work-orders-panel__bills-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+.bf-gst-invoice-modal__error {
+  color: var(--color-danger, #dc2626);
+  margin-bottom: 12px;
+}
+
+.bf-gst-invoice-print__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.bf-gst-invoice-print__sheet {
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.bf-gst-invoice-print__sheet h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.bf-gst-invoice-print__parties {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.bf-gst-invoice-print__parties > div {
+  flex: 1;
+}
+
+.bf-gst-invoice-print__totals {
+  margin-top: 16px;
+  margin-left: auto;
+  width: 260px;
+}
+
+.bf-gst-invoice-print__totals > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.bf-gst-invoice-print__grand-total {
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  font-weight: 600;
+  margin-top: 4px;
+  padding-top: 8px !important;
+}
+
+@media print {
+  body:has(.bf-gst-invoice-print__sheet) * {
+    visibility: hidden;
+  }
+
+  .bf-gst-invoice-print__sheet,
+  .bf-gst-invoice-print__sheet * {
+    visibility: visible;
+  }
+
+  .bf-gst-invoice-print__sheet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .bf-gst-invoice-print__actions {
+    display: none;
+  }
+}

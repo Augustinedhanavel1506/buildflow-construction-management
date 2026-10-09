@@ -1,0 +1,150 @@
+.bf-dealers-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bf-dealers-page__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-dealers-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.bf-dealers-page__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 560px;
+}
+
+.bf-dealers-page__search {
+  height: 38px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  max-width: 360px;
+}
+
+.bf-dealers-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.bf-dealer-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bf-dealer-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.bf-dealer-card__header h3 {
+  margin: 0;
+}
+
+.bf-dealer-card__meta,
+.bf-dealer-card__contact {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-dealer-card__rates {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: var(--space-3) 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 13px;
+}
+
+.bf-dealer-card__rates li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-dealer-card__more {
+  color: var(--text-muted);
+}
+
+.bf-dealer-card__edit {
+  align-self: flex-start;
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: var(--space-2);
+}
+
+.bf-dealers-page__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 20, 26, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+  overflow-y: auto;
+  z-index: 200;
+}
+
+.bf-dealers-page__panel {
+  width: 100%;
+  max-width: 680px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-6);
+}
+
+.bf-dealers-page__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.bf-dealers-page__panel-header h2 {
+  margin: 0;
+}
+
+.bf-dealers-page__panel-header button {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+.bf-dealers-page__panel-body {
+  padding: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .bf-dealers-page__header {
+    flex-direction: column;
+  }
+}

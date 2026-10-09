@@ -1,0 +1,10 @@
+.bf-confirm-dialog__description {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.bf-confirm-dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}

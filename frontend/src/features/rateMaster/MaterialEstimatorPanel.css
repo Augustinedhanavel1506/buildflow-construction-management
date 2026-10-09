@@ -1,0 +1,21 @@
+.bf-material-estimator {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-material-estimator p {
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 640px;
+}
+
+.bf-material-estimator__total-row td {
+  font-weight: 700;
+  border-top: 2px solid var(--border);
+}
+
+.bf-material-estimator__disclaimer {
+  font-size: 12px;
+  color: var(--text-muted, var(--text-secondary));
+}

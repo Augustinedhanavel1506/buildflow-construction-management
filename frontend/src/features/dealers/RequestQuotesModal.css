@@ -1,0 +1,59 @@
+.bf-request-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-request-quotes__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-request-quotes__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.bf-request-quotes__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.bf-request-quotes__dealer {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.bf-request-quotes__dealer:hover {
+  border-color: var(--border-strong);
+}
+
+.bf-request-quotes__meta {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.bf-request-quotes__hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.bf-request-quotes__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}

@@ -1,0 +1,42 @@
+.bf-billing-form,
+.bf-certify-form,
+.bf-payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-billing-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bf-billing-form__error,
+.bf-certify-form__error,
+.bf-payment-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-billing-form__preview {
+  display: flex;
+  justify-content: space-between;
+  background: var(--surface-secondary);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-billing-form__actions,
+.bf-certify-form__actions,
+.bf-payment-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

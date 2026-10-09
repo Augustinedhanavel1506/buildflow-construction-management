@@ -1,0 +1,24 @@
+.bf-validate-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-validate-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-validate-form__hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-validate-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}

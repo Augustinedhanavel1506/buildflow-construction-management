@@ -1,0 +1,360 @@
+.bf-whatif {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-whatif__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-whatif__back {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.bf-whatif__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.bf-whatif__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 620px;
+}
+
+.bf-whatif__quick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-whatif__quick button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bf-whatif__quick button:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.bf-whatif__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.bf-whatif__controls,
+.bf-whatif__results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bf-whatif__results {
+  position: sticky;
+  top: var(--space-4);
+}
+
+.bf-whatif h3 {
+  margin: 0 0 var(--space-3);
+  font-size: 15px;
+}
+
+.bf-whatif__grades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.bf-whatif__grade {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bf-whatif__grade small {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.bf-whatif__grade--active {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.bf-whatif__floor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bf-whatif__floor--removed {
+  opacity: 0.55;
+}
+
+.bf-whatif__remove {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: var(--space-3);
+}
+
+.bf-whatif__check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-whatif__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.bf-whatif__field input {
+  height: 34px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.bf-whatif__steppers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.bf-whatif__stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+}
+
+.bf-whatif__stepper span {
+  color: var(--text-secondary);
+  width: 70px;
+}
+
+.bf-whatif__stepper button {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.bf-whatif__stepper strong {
+  min-width: 18px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-whatif__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.bf-whatif__placeholder {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.bf-whatif__loading {
+  opacity: 0.6;
+}
+
+.bf-whatif__label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.bf-whatif__delta {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-whatif__delta--up {
+  color: var(--danger);
+}
+
+.bf-whatif__delta--down {
+  color: var(--success);
+}
+
+.bf-whatif__percent {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-whatif__compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+}
+
+.bf-whatif__compare div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bf-whatif__compare span {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.bf-whatif__compare strong {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-whatif__compare small {
+  color: var(--text-muted);
+}
+
+.bf-whatif__components {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bf-whatif__component {
+  display: grid;
+  grid-template-columns: 150px 1fr 100px;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 13px;
+}
+
+.bf-whatif__component strong {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-whatif__bar {
+  height: 12px;
+  background: var(--surface-secondary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.bf-whatif__bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.bf-whatif__bar-fill--up {
+  background: var(--danger);
+}
+
+.bf-whatif__bar-fill--down {
+  background: var(--success);
+}
+
+.bf-whatif__note {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .bf-whatif__body {
+    grid-template-columns: 1fr;
+  }
+
+  .bf-whatif__results {
+    position: static;
+  }
+
+  .bf-whatif__header {
+    flex-direction: column;
+  }
+
+  .bf-whatif__component {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .bf-whatif__component strong {
+    text-align: left;
+  }
+
+  .bf-table.bf-whatif__table {
+    display: table;
+  }
+
+  .bf-table.bf-whatif__table thead {
+    display: table-header-group;
+  }
+
+  .bf-table.bf-whatif__table tbody {
+    display: table-row-group;
+  }
+
+  .bf-table.bf-whatif__table tr {
+    display: table-row;
+    padding: 0;
+  }
+
+  .bf-table.bf-whatif__table td,
+  .bf-table.bf-whatif__table th {
+    display: table-cell;
+    width: auto;
+    padding: var(--space-2);
+  }
+}

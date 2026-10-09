@@ -1,0 +1,133 @@
+.bf-offline-badge {
+  position: relative;
+}
+
+.bf-offline-badge__trigger {
+  border: 1px solid var(--border);
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bf-offline-badge__trigger--offline {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: transparent;
+}
+
+.bf-offline-badge__dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  z-index: 50;
+}
+
+.bf-offline-badge__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.bf-offline-badge__retry {
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bf-offline-badge__retry:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bf-offline-badge__note {
+  padding: var(--space-3) var(--space-4);
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.bf-offline-badge__empty {
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.bf-offline-badge__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bf-offline-badge__list li {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.bf-offline-badge__item--failed {
+  background: var(--danger-soft);
+}
+
+.bf-offline-badge__item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bf-offline-badge__item-type {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.bf-offline-badge__item-label {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.bf-offline-badge__item-status {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.bf-offline-badge__item-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.bf-offline-badge__item-error span {
+  font-size: 12px;
+  color: var(--danger);
+}
+
+.bf-offline-badge__item-error button {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}

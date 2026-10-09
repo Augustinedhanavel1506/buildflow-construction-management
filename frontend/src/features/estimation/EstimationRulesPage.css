@@ -1,0 +1,80 @@
+.bf-rules-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bf-rules-page__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-rules-page__intro {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 640px;
+}
+
+.bf-rules-page__warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-rules-page__tabs {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.bf-rules-page__tab {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bf-rules-page__tab--active {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.bf-rules-page__source {
+  max-width: 200px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-rules-page__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.bf-rules-page__actions {
+  white-space: nowrap;
+}
+
+.bf-rules-page__actions button {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+  margin-right: var(--space-3);
+}
+
+.bf-rules-page__actions button:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}

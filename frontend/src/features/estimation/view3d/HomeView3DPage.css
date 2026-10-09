@@ -1,0 +1,295 @@
+.bf-view3d {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-view3d__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-view3d__back {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.bf-view3d__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 620px;
+}
+
+.bf-view3d__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.bf-view3d__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bf-view3d__canvas {
+  width: 100%;
+  height: 560px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  touch-action: none;
+}
+
+.bf-view3d__canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bf-view3d__toolbar {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.bf-view3d__toolbar button,
+.bf-view3d__toolbar select,
+.bf-view3d__seg button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bf-view3d__toolbar button.is-active,
+.bf-view3d__seg button.is-active,
+.bf-view3d__room.is-active {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.bf-view3d__hint,
+.bf-view3d__note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.bf-view3d__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bf-view3d__panel h3 {
+  font-size: 15px;
+  margin: 0 0 var(--space-3);
+}
+
+.bf-view3d__colour,
+.bf-view3d__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.bf-view3d__palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.bf-view3d__palette button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  padding: 0;
+}
+
+.bf-view3d__palette button.is-active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-soft);
+}
+
+.bf-view3d__palette input[type="color"] {
+  width: 32px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+}
+
+.bf-view3d__seg {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.bf-view3d__check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.bf-view3d__rooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.bf-view3d__room {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bf-view3d__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+}
+
+.bf-view3d__panel .bf-card button.bf-btn,
+.bf-view3d__panel .bf-card > button {
+  margin: 0 var(--space-2) var(--space-2) 0;
+}
+
+@media (max-width: 1000px) {
+  .bf-view3d__body {
+    grid-template-columns: 1fr;
+  }
+
+  .bf-view3d__canvas {
+    height: 420px;
+  }
+}
+
+.bf-view3d__goto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.bf-view3d__goto button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bf-view3d__goto button:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.bf-view3d__catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.bf-view3d__catalog button {
+  border: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.bf-view3d__catalog button:hover {
+  background: var(--primary-soft);
+}
+
+.bf-view3d__edit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+}
+
+.bf-view3d__dims {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.bf-view3d__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.bf-view3d__field input,
+.bf-view3d__field select {
+  width: 100%;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  min-width: 0;
+}
+
+.bf-view3d__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}

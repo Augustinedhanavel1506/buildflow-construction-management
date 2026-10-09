@@ -1,0 +1,143 @@
+.bf-topbar {
+  height: var(--topbar-height);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.bf-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bf-topbar__icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.bf-topbar__icon-button:hover {
+  background: var(--surface-secondary);
+}
+
+.bf-topbar__collapse {
+  display: inline-flex;
+}
+
+.bf-topbar__hamburger {
+  display: none;
+}
+
+.bf-topbar__business {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.bf-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.bf-topbar__menu {
+  position: relative;
+}
+
+.bf-topbar__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius-md);
+}
+
+.bf-topbar__user:hover {
+  background: var(--surface-secondary);
+}
+
+.bf-topbar__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.bf-topbar__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.bf-topbar__user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.bf-topbar__user-role {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.bf-topbar__dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  min-width: 140px;
+  overflow: hidden;
+}
+
+.bf-topbar__dropdown button {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-3);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.bf-topbar__dropdown button:hover {
+  background: var(--surface-secondary);
+}
+
+@media (max-width: 900px) {
+  .bf-topbar__hamburger {
+    display: inline-flex;
+  }
+
+  .bf-topbar__collapse {
+    display: none;
+  }
+
+  .bf-topbar__user-info {
+    display: none;
+  }
+}

@@ -1,0 +1,34 @@
+.bf-boq-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-boq-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bf-boq-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-boq-form__estimate {
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--surface-secondary);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-boq-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

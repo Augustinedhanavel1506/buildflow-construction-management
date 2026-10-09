@@ -1,0 +1,44 @@
+.bf-work-order-form,
+.bf-sub-bill-form,
+.bf-sub-payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-work-order-form__row,
+.bf-sub-bill-form__row,
+.bf-sub-payment-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bf-work-order-form__error,
+.bf-sub-bill-form__error,
+.bf-sub-payment-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-sub-bill-form__preview {
+  display: flex;
+  justify-content: space-between;
+  background: var(--surface-secondary);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-work-order-form__actions,
+.bf-sub-bill-form__actions,
+.bf-sub-payment-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

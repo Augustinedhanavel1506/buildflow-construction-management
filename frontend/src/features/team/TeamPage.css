@@ -1,0 +1,71 @@
+.bf-team-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bf-team-page__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-team-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.bf-team-page__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 560px;
+}
+
+.bf-team-page__actions button {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bf-team-page__actions button:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.bf-team-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-team-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-team-form__hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.bf-team-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .bf-team-page__header {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,283 @@
+.bf-hr-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+
+.bf-hr-form__steps {
+  display: flex;
+  align-items: center;
+}
+
+.bf-hr-form__step-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.bf-hr-form__step-wrap:last-child {
+  flex: 0;
+}
+
+.bf-hr-form__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: none;
+  background: transparent;
+  padding: var(--space-1) 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: not-allowed;
+  white-space: nowrap;
+}
+
+.bf-hr-form__step--reachable {
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.bf-hr-form__step--active {
+  color: var(--primary);
+}
+
+.bf-hr-form__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.bf-hr-form__step--active .bf-hr-form__step-number {
+  background: var(--primary);
+  color: var(--text-on-primary);
+}
+
+.bf-hr-form__step--reachable .bf-hr-form__step-number {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.bf-hr-form__step--active.bf-hr-form__step--reachable .bf-hr-form__step-number {
+  background: var(--primary);
+  color: var(--text-on-primary);
+}
+
+.bf-hr-form__step-connector {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin: 0 var(--space-2);
+}
+
+.bf-hr-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-hr-form__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-hr-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bf-hr-form__row--triple {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bf-hr-form__hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: calc(var(--space-3) * -1);
+}
+
+.bf-hr-form__grade-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.bf-hr-form__grade-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: left;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.08s ease;
+}
+
+.bf-hr-form__grade-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-strong);
+}
+
+.bf-hr-form__grade-card--active {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.bf-hr-form__grade-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.bf-hr-form__grade-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.bf-hr-form__advanced {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.bf-hr-form__advanced summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.bf-hr-form__advanced[open] summary {
+  margin-bottom: var(--space-3);
+}
+
+.bf-hr-form__add-floor {
+  align-self: flex-start;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bf-hr-form__add-floor:hover {
+  background: var(--primary-soft);
+}
+
+.bf-hr-form__total-area {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border);
+}
+
+.bf-hr-form__review-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+}
+
+.bf-hr-form__review-card h4 {
+  margin: 0 0 var(--space-1);
+}
+
+.bf-hr-form__review-location {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: var(--space-3);
+}
+
+.bf-hr-form__review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.bf-hr-form__review-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bf-hr-form__review-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.bf-hr-form__review-floors {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bf-hr-form__review-floor {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--surface-secondary);
+  font-size: 13px;
+}
+
+.bf-hr-form__review-floor-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.bf-hr-form__review-floor-detail {
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.bf-hr-form__disclaimer {
+  font-size: 12px;
+  background: var(--info-soft);
+  color: var(--info);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-hr-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .bf-hr-form__row,
+  .bf-hr-form__row--triple,
+  .bf-hr-form__grade-grid,
+  .bf-hr-form__review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bf-hr-form__step-wrap:last-child {
+    display: none;
+  }
+}

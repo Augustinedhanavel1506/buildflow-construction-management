@@ -1,0 +1,34 @@
+.bf-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 var(--space-2);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.bf-badge--neutral {
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+}
+
+.bf-badge--success {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.bf-badge--warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.bf-badge--danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.bf-badge--info {
+  background: var(--info-soft);
+  color: var(--info);
+}

@@ -1,0 +1,69 @@
+.bf-auth-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  padding: var(--space-4);
+}
+
+.bf-auth-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bf-auth-card__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.bf-auth-card__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--primary);
+  color: var(--text-on-primary);
+  font-weight: 700;
+}
+
+.bf-auth-card__brand-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bf-auth-card__header {
+  text-align: center;
+}
+
+.bf-auth-card__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+.bf-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-auth-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-auth-card__footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+}

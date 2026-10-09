@@ -1,0 +1,175 @@
+.bf-estimation-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.bf-estimation-list__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-estimation-list__hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  color: var(--text-on-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.bf-estimation-list__eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: var(--space-2);
+}
+
+.bf-estimation-list__hero h1 {
+  color: var(--text-on-primary);
+  margin-bottom: var(--space-2);
+}
+
+.bf-estimation-list__hero p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+}
+
+.bf-estimation-list__hero .bf-button--primary {
+  background: var(--text-on-primary);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.bf-estimation-list__hero .bf-button--primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.bf-estimation-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.bf-plan-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.bf-plan-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.bf-plan-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bf-plan-card__icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.bf-plan-card__title {
+  margin: 0;
+}
+
+.bf-plan-card__location {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.bf-plan-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: var(--space-1) 0;
+}
+
+.bf-plan-card__stat-value {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-plan-card__stat-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.bf-estimation-list__form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 20, 26, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+  overflow-y: auto;
+  z-index: 200;
+}
+
+.bf-estimation-list__form-panel {
+  width: 100%;
+  max-width: 720px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-6);
+}
+
+.bf-estimation-list__form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.bf-estimation-list__form-header h2 {
+  margin: 0;
+}
+
+.bf-estimation-list__form-close {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .bf-estimation-list__hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

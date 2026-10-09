@@ -1,0 +1,339 @@
+.bf-plan-editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-plan-editor__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-plan-editor__back {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.bf-plan-editor__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.bf-plan-editor__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 620px;
+}
+
+.bf-plan-editor__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.bf-plan-editor__disclaimer {
+  background: var(--warning-soft);
+  color: var(--warning);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-plan-editor__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.bf-plan-editor__tab {
+  position: relative;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bf-plan-editor__tab--active {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.bf-plan-editor__dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: var(--space-2);
+  border-radius: 50%;
+  background: var(--warning);
+}
+
+.bf-plan-editor__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.bf-plan-editor__canvas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bf-plan-editor__empty {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  max-width: 320px;
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-plan-editor__problems {
+  margin: 0;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-6);
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-plan-editor__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bf-plan-editor__panel h3 {
+  font-size: 15px;
+  margin: 0 0 var(--space-3);
+}
+
+.bf-plan-editor__panel h4 {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: 13px;
+}
+
+.bf-plan-editor__palette {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.bf-plan-editor__palette button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.bf-plan-editor__palette button:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.bf-plan-editor__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.bf-plan-editor__panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bf-plan-editor__delete {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: var(--space-3);
+}
+
+.bf-plan-editor__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.bf-plan-editor__field input,
+.bf-plan-editor__field select,
+.bf-plan-editor__opening input,
+.bf-plan-editor__opening select {
+  height: 32px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  min-width: 0;
+}
+
+.bf-plan-editor__grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-3);
+}
+
+.bf-plan-editor__add-opening {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.bf-plan-editor__add-opening div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+}
+
+.bf-plan-editor__add-opening span {
+  width: 48px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.bf-plan-editor__add-opening button {
+  border: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.bf-plan-editor__opening {
+  display: grid;
+  grid-template-columns: 52px 1fr 58px 58px 22px;
+  gap: var(--space-1);
+  align-items: center;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.bf-plan-editor__opening--selected {
+  background: var(--primary-soft);
+}
+
+.bf-plan-editor__opening button {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bf-plan-editor__summary {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 13px;
+}
+
+.bf-plan-editor__summary div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bf-plan-editor__summary dt {
+  color: var(--text-secondary);
+}
+
+.bf-plan-editor__summary dd {
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-plan-editor__hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 1000px) {
+  .bf-plan-editor__body {
+    grid-template-columns: 1fr;
+  }
+
+  .bf-plan-editor__header {
+    flex-direction: column;
+  }
+
+  .bf-plan-editor__actions {
+    justify-content: flex-start;
+  }
+}
+
+.bf-plan-editor__bad {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.bf-plan-editor__site-issues {
+  margin: var(--space-2) 0 var(--space-3);
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-5);
+  background: var(--warning-soft);
+  color: var(--warning);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+}
+
+.bf-plan-editor__field input,
+.bf-plan-editor__field select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bf-plan-editor__grid2 > .bf-plan-editor__field {
+  min-width: 0;
+}

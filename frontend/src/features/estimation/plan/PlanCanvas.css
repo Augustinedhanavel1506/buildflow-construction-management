@@ -1,0 +1,177 @@
+.bf-plan-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  touch-action: none;
+  user-select: none;
+}
+
+.bf-plan-canvas--readonly {
+  touch-action: auto;
+}
+
+.bf-plan-canvas__grid-minor {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 0.04;
+  opacity: 0.7;
+}
+
+.bf-plan-canvas__grid-major {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 0.07;
+  opacity: 0.8;
+}
+
+.bf-plan-canvas__plot {
+  stroke: var(--text-secondary);
+  stroke-width: 0.18;
+  stroke-dasharray: 0.8 0.5;
+}
+
+.bf-plan-canvas__road {
+  fill: var(--text-muted);
+  font-size: 0.9px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+}
+
+.bf-plan-canvas__dimension {
+  fill: var(--text-secondary);
+  font-size: 0.85px;
+  font-weight: 600;
+}
+
+.bf-plan-canvas__room {
+  stroke-width: 0.22;
+  cursor: move;
+}
+
+.bf-plan-canvas--readonly .bf-plan-canvas__room {
+  cursor: default;
+}
+
+.bf-plan-canvas__room--selected {
+  stroke: var(--primary);
+  stroke-width: 0.4;
+}
+
+.bf-plan-canvas__room--problem {
+  stroke: var(--danger);
+  stroke-width: 0.4;
+  fill: var(--danger);
+  fill-opacity: 0.18;
+}
+
+.bf-plan-canvas__label {
+  fill: var(--text-primary);
+  font-weight: 700;
+}
+
+.bf-plan-canvas__sublabel {
+  fill: var(--text-secondary);
+}
+
+.bf-plan-canvas__opening-gap {
+  stroke: var(--surface);
+  stroke-width: 0.5;
+}
+
+.bf-plan-canvas__door {
+  stroke: #a0643c;
+  stroke-width: 0.3;
+  stroke-linecap: butt;
+}
+
+.bf-plan-canvas__window {
+  stroke: #3b82f6;
+  stroke-width: 0.12;
+}
+
+.bf-plan-canvas__opening--selected .bf-plan-canvas__door,
+.bf-plan-canvas__opening--selected .bf-plan-canvas__window {
+  stroke: var(--primary);
+  stroke-width: 0.45;
+}
+
+.bf-plan-canvas__opening-hit {
+  stroke: transparent;
+  stroke-width: 1.4;
+  cursor: pointer;
+}
+
+.bf-plan-canvas__handle {
+  fill: var(--primary);
+  stroke: var(--surface);
+  stroke-width: 0.15;
+  cursor: nwse-resize;
+}
+
+.bf-plan-canvas__beam {
+  stroke: #475569;
+  stroke-width: 0.18;
+  stroke-dasharray: 0.7 0.4;
+  pointer-events: none;
+}
+
+.bf-plan-canvas__column {
+  fill: #1f2937;
+  stroke: var(--surface);
+  stroke-width: 0.12;
+  cursor: move;
+}
+
+.bf-plan-canvas--readonly .bf-plan-canvas__column {
+  cursor: default;
+}
+
+.bf-plan-canvas__column--selected {
+  fill: var(--primary);
+  stroke: var(--primary);
+  stroke-width: 0.35;
+}
+
+.bf-plan-canvas__furniture {
+  stroke: rgba(0, 0, 0, 0.55);
+  stroke-width: 0.06;
+  cursor: move;
+}
+
+.bf-plan-canvas--readonly .bf-plan-canvas__furniture {
+  cursor: default;
+}
+
+.bf-plan-canvas__furniture--selected {
+  stroke: var(--primary);
+  stroke-width: 0.25;
+}
+
+.bf-plan-canvas__furniture-back {
+  stroke: rgba(0, 0, 0, 0.6);
+  stroke-width: 0.12;
+  stroke-linecap: round;
+}
+
+.bf-plan-canvas__furniture-label {
+  fill: #ffffff;
+  stroke: rgba(0, 0, 0, 0.7);
+  stroke-width: 0.12;
+  paint-order: stroke;
+  font-weight: 600;
+}
+
+.bf-plan-canvas__setback {
+  fill: var(--warning);
+  fill-opacity: 0.12;
+}
+
+.bf-plan-canvas__envelope {
+  fill: none;
+  stroke: var(--warning);
+  stroke-width: 0.14;
+  stroke-dasharray: 0.5 0.35;
+}

@@ -1,0 +1,118 @@
+.bf-sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.15s ease;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.bf-sidebar--collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.bf-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--topbar-height);
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.bf-sidebar__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--primary);
+  color: var(--text-on-primary);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.bf-sidebar__brand-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.bf-sidebar__nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bf-sidebar__section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.bf-sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.bf-sidebar__link:hover {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+}
+
+.bf-sidebar__link--active {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.bf-sidebar__link-icon {
+  width: 20px;
+  text-align: center;
+}
+
+.bf-sidebar-scrim {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .bf-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  .bf-sidebar--mobile-open {
+    transform: translateX(0);
+  }
+
+  .bf-sidebar-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+  }
+}

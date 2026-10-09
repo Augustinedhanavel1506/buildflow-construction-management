@@ -1,0 +1,40 @@
+.bf-subcontractors-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.bf-subcontractors-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.bf-subcontractors-page__header p {
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  max-width: 560px;
+}
+
+.bf-subcontractors-page__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-subcontractors-page__row-actions button {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.bf-subcontractors-page__row-actions button:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}

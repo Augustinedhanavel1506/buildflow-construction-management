@@ -1,0 +1,39 @@
+.bf-toast-stack {
+  position: fixed;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.bf-toast {
+  pointer-events: auto;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  max-width: min(420px, calc(100vw - 2 * var(--space-5)));
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-on-primary);
+  min-width: 240px;
+}
+
+.bf-toast--success {
+  background: var(--success);
+}
+
+.bf-toast--error {
+  background: var(--danger);
+}
+
+.bf-toast--warning {
+  background: var(--warning);
+}

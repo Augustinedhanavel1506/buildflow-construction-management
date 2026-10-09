@@ -1,0 +1,60 @@
+.bf-billing-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-billing-panel__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-billing-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bf-billing-panel__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .bf-billing-panel__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bf-billing-panel__outstanding {
+  color: var(--danger);
+}
+
+.bf-billing-panel__row-actions {
+  display: flex;
+  gap: var(--space-2);
+  white-space: nowrap;
+}
+
+.bf-billing-panel__row-actions button {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.bf-billing-panel__row-actions button:hover:not(:disabled) {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.bf-billing-panel__row-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

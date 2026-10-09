@@ -1,0 +1,52 @@
+.bf-boq-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-boq-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bf-boq-panel__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-boq-panel tfoot td {
+  border-top: 2px solid var(--border);
+  border-bottom: none;
+}
+
+.bf-boq-panel__variance-over {
+  color: var(--danger);
+}
+
+.bf-boq-panel__variance-under {
+  color: var(--success);
+}
+
+.bf-boq-panel__row-actions {
+  display: flex;
+  gap: var(--space-2);
+  white-space: nowrap;
+}
+
+.bf-boq-panel__row-actions button {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.bf-boq-panel__row-actions button:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}

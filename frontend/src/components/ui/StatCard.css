@@ -1,0 +1,35 @@
+.bf-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bf-stat-card__label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.bf-stat-card__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.bf-stat-card__note {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.bf-stat-card--clickable {
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.bf-stat-card--clickable:hover,
+.bf-stat-card--clickable:focus-visible {
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.08));
+  border-color: var(--primary, #2563eb);
+  transform: translateY(-1px);
+}

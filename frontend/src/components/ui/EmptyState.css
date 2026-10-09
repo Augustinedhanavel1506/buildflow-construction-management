@@ -1,0 +1,17 @@
+.bf-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.bf-empty-state h3 {
+  color: var(--text-primary);
+}
+
+.bf-empty-state p {
+  max-width: 360px;
+}

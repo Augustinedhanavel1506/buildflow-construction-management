@@ -1,0 +1,44 @@
+.bf-material-form,
+.bf-purchase-form,
+.bf-usage-form,
+.bf-requisition-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-material-form__row,
+.bf-purchase-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bf-material-form__error,
+.bf-purchase-form__error,
+.bf-usage-form__error,
+.bf-requisition-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-material-form__hint {
+  background: var(--surface-secondary);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-material-form__actions,
+.bf-purchase-form__actions,
+.bf-usage-form__actions,
+.bf-requisition-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

@@ -1,0 +1,52 @@
+.bf-rule-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bf-rule-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bf-rule-form__error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.bf-rule-form__context {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-rule-form__hint {
+  font-size: 12px;
+  background: var(--info-soft);
+  color: var(--info);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.bf-rule-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bf-rule-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .bf-rule-form__row {
+    grid-template-columns: 1fr;
+  }
+}
